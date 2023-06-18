@@ -3,6 +3,7 @@ import {
   Box, 
   Button, 
   Divider, 
+  Grid,
   IconButton, 
   Menu,
   MenuItem,
@@ -17,7 +18,7 @@ import {
   useMediaQuery, 
   useTheme 
 } from "@mui/material";
-import { DataGrid } from "@mui/x-data-grid";
+import { DataGrid, GridColumnHeaderFilterIconButton } from "@mui/x-data-grid";
 import { useGetTransactionsQuery, useGetChainOfShipmentsQuery } from "state/api";
 import Header from "components/Header";
 import Map from "components/Map";
@@ -27,6 +28,11 @@ import DataGridCustomToolbar from "components/DataGridCustomToolbar";
 import ActionMenu from "components/ActionMenu";
 import FlexBetween from "components/FlexBetween";
 import PrimaryButtons from "components/PrimaryButtons";
+import AcceptedList from "components/AcceptedList";
+import FlexTop from "components/FlexTop";
+import Chat from "components/Chat";
+import HalfWidth from "components/HalfWidth";
+import HalfHeight from "components/HalfHeight";
 
 const Transactions = () => {
   const theme = useTheme();
@@ -39,6 +45,7 @@ const Transactions = () => {
   const [search, setSearch] = useState("");
   const [coordinates, setCoordinates] = useState([]);
   const [selectedId, setSelectedId] = useState("TR2023019QXZZFR");
+  const [text, setText] = useState("");
 
   const [searchInput, setSearchInput] = useState("");
   const { data, isLoading } = useGetTransactionsQuery({
@@ -48,7 +55,51 @@ const Transactions = () => {
     search,
   });
 
+  const url = "https://7wzrynoxje.execute-api.us-west-1.amazonaws.com/v1/getWeather";
+
+    async function fetchDataWithJsonBody(url = '', jsonBody = {}) {
+        // The data we are going to send in our request
+        const payload = {
+            method: 'POST', // or 'PUT'
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(jsonBody) // We convert the JSON body to a string
+        };
+
+        try {
+            // We send the request
+            const response = await fetch(url, payload);
+
+            // We throw an error if the request was unsuccessful
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+
+            // We convert the response to JSON
+            const jsonData = await response.json();
+            return jsonData;
+        } catch (error) {
+            console.error(`Failed to fetch from the URL ${url}. Error: ${error}`);
+            return null;
+        }
+    }
+
+    const jsonBody = {
+        key1: 'value1',
+    };
+
+    
+
+  function setVals()
+  {
+    fetchDataWithJsonBody(url, jsonBody)
+        .then(data => setText(data.key1)) // JSON from `response.json()` call
+        .catch(error => console.error(error));
+  }
+
   // console.log(data);
+
 
   let {data: locations, isLoading: isLoadingNew} = useGetChainOfShipmentsQuery(selectedId);
   if(locations ===  undefined)
@@ -104,20 +155,53 @@ const Transactions = () => {
     <Box m="1.5rem 2.5rem">
       <FlexBetween>
         <Header title="SHIPMENTS"/>
-        <PrimaryButtons/>
+        <Button
+              sx={{
+                backgroundColor: theme.palette.secondary.light,
+                color: theme.palette.background.alt,
+                fontSize: "14px",
+                fontWeight: "bold",
+                padding: "10px 20px",
+                // height: "20px"
+              }}
+              onClick={setVals}
+           >Check Supplier Status </Button>
       </FlexBetween>
       
-      <Box mt="2rem">
-        <Map 
-          coordinates={coordinates}
-          locations={locations}>
-        </Map>
+      <Box
+        display="grid"
+        gridTemplateColumns="repeat(12, 1fr)"
+        gridAutoRows="160px"
+        gap="20px"
+        sx={{
+          "& > div": { gridColumn: isNonMediumScreens ? undefined : "span 12" },
+        }}
+      >
+        <Box
+          gridColumn="span 4"
+          gridRow="span 2"
+          backgroundColor={theme.palette.background.alt}
+          p="1rem"
+          borderRadius="0.55rem"
+        >
+          <AcceptedList text={text}/>
+        </Box>
+        <Box
+          gridColumn="span 5"
+          gridRow="span 3"
+          backgroundColor={theme.palette.background.alt}
+          p="1.5rem"
+          borderRadius="0.55rem"
+        >
+          <Map locations={locations} coordinates={coordinates}/>
+        </Box>
 
-
+        
       </Box>
       
+      
       <Box
-        height="80vh"
+        height="60vh"
         sx={{
           "& .MuiDataGrid-root": {
             border: "none",

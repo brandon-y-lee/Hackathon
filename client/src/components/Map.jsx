@@ -9,6 +9,7 @@ const Map = (props) => {
     const markersRef = useRef([]);
     const polylineRef = useRef(null);
     const [activeMarkerIndex, setActiveMarkerIndex] = useState(null);
+    const [text, setText] = useState("");
 
     const handleKeyDown = (event) => {
         // Check if the target of the event is a marker
@@ -44,29 +45,70 @@ const Map = (props) => {
         setActiveMarkerIndex(null); // close InfoWindow
     };
 
-    function getPolylinePath(shipmentArray){
-        console.log("Here");
-        const data = shipmentArray;
-        const pairs = [];
-        const idToObject = {};
+    // function getPolylinePath(shipmentArray){
+    //     console.log("Here");
+    //     const data = shipmentArray;
+    //     const pairs = [];
+    //     const idToObject = {};
 
-        // Create a dictionary to map object IDs to their corresponding objects
-        data.forEach(obj => {
-        idToObject[obj.id] = obj;
-        }); 
+    //     // Create a dictionary to map object IDs to their corresponding objects
+    //     data.forEach(obj => {
+    //     idToObject[obj.id] = obj;
+    //     });
+        
+    //     console.log(data);
 
-        // Generate pairs where a.next = b.id
-        data.forEach(obj => {
-            const nextId = obj.next;
-            if (nextId && idToObject[nextId]) {
-                const a = obj.coordinates;
-                const b = idToObject[nextId].coordinates;
-                pairs.push([ [a[0].$numberDecimal,a[1].$numberDecimal], [b[0].$numberDecimal, b[1].$numberDecimal]]);
-            }
-        });
-        console.log(pairs);
-        return pairs;
-    }
+    //     // Generate pairs where a.next = b.id
+    //     data.forEach(obj => {
+    //         const nextId = obj.next;
+    //         if (nextId && idToObject[nextId]) {
+    //             const a = obj.coordinates;
+    //             const b = idToObject[nextId].coordinates;
+    //             pairs.push([ [a[0].$numberDecimal,a[1].$numberDecimal], [b[0].$numberDecimal, b[1].$numberDecimal]]);
+    //         }
+    //     });
+    //     console.log(pairs);
+    //     return pairs;
+    // }
+
+    const url = "https://7wzrynoxje.execute-api.us-west-1.amazonaws.com/v1/getWeather";
+
+    // async function fetchDataWithJsonBody(url = '', jsonBody = {}) {
+    //     // The data we are going to send in our request
+    //     const payload = {
+    //         method: 'POST', // or 'PUT'
+    //         headers: {
+    //             'Content-Type': 'application/json'
+    //         },
+    //         body: JSON.stringify(jsonBody) // We convert the JSON body to a string
+    //     };
+
+    //     try {
+    //         // We send the request
+    //         const response = await fetch(url, payload);
+
+    //         // We throw an error if the request was unsuccessful
+    //         if (!response.ok) {
+    //             throw new Error(`HTTP error! status: ${response.status}`);
+    //         }
+
+    //         // We convert the response to JSON
+    //         const jsonData = await response.json();
+    //         return jsonData;
+    //     } catch (error) {
+    //         console.error(`Failed to fetch from the URL ${url}. Error: ${error}`);
+    //         return null;
+    //     }
+    // }
+
+    // const jsonBody = {
+    //     key1: 'value1',
+    // };
+
+    // fetchDataWithJsonBody(url, jsonBody)
+    //     .then(data => console.log(data)) // JSON from `response.json()` call
+    //     .catch(error => console.error(error));
+
 
     function getPolylinePath(shipmentArray){
         console.log("Here");
@@ -98,7 +140,7 @@ const Map = (props) => {
 
         const map = new Map(mapRef.current, {
             center: { lat: 10.99835602, lng: 77.01502627 },
-            zoom: 5,
+            zoom: 2,
         });
 
         var bounds = new window.google.maps.LatLngBounds();
@@ -120,41 +162,45 @@ const Map = (props) => {
                 marker.markerIndex = index;
 
                 // Add a click listener to focus the marker when it's clicked
-                marker.addListener('click', () => {
+                marker.addListener('click', async () => {
                     setActiveMarkerIndex(index);
+                    
+                    // const response = await fetchDataWithJsonBody(jsonBody);
+                    
+                    
                 });
             });
     
 
-                let pPairs = getPolylinePath(props.locations.shipmentChain);
-                console.log(pPairs);
-                var polygons = [];
+                // let pPairs = getPolylinePath(props.locations.shipmentChain);
+                // console.log("Ppairs:" , pPairs);
+                // var polygons = [];
                 
-                for(var i in pPairs)
-                {   
-                    var arr = [];
+                // for(var i in pPairs)
+                // {   
+                //     var arr = [];
 
-                    for (var j = 0; j < pPairs[i].length; j++) {
-                        console.log(pPairs);
-                        arr.push(new window.google.maps.LatLng(
-                            parseFloat(pPairs[i][j][0]),
-                            parseFloat(pPairs[i][j][1])
-                        ));
-                        bounds.extend(arr[arr.length - 1])
-                    }
-                    map.fitBounds(bounds);
-                    console.log(arr);
-                    polygons.push(new window.google.maps.Polyline({
-                    path: arr,
-                    strokeColor: '#FF0000',
-                    strokeOpacity: 0.8,
-                    strokeWeight: 2,
-                    fillColor: '#FF0000',
-                    fillOpacity: 0.35
-                    }));
+                //     for (var j = 0; j < pPairs[i].length; j++) {
+                //         console.log(pPairs);
+                //         arr.push(new window.google.maps.LatLng(
+                //             parseFloat(pPairs[i][j][0]),
+                //             parseFloat(pPairs[i][j][1])
+                //         ));
+                //         bounds.extend(arr[arr.length - 1])
+                //     }
+                //     map.fitBounds(bounds);
+                //     console.log(arr);
+                //     polygons.push(new window.google.maps.Polyline({
+                //     path: arr,
+                //     strokeColor: '#FF0000',
+                //     strokeOpacity: 0.8,
+                //     strokeWeight: 2,
+                //     fillColor: '#FF0000',
+                //     fillOpacity: 0.35
+                //     }));
                     
-                    polygons[polygons.length - 1].setMap(map);
-                }
+                //     polygons[polygons.length - 1].setMap(map);
+                // }
             
         }
 
@@ -182,16 +228,17 @@ const Map = (props) => {
     }, [props]);
 
     return (
-        <div ref={mapRef} style={{ height: "80vh", width: "50%" }}>
-            {activeMarkerIndex !== null && (
-                <InfoWindow
-                lat={props.locations.shipmentChain[activeMarkerIndex].coordinates[0].$numberDecimal}
-                lng={props.locations.shipmentChain[activeMarkerIndex].coordinates[1].$numberDecimal}
-                onClose={closeInfoWindow}
-                title={props.locations.shipmentChain[activeMarkerIndex].name}
-              />
-            )}
-        </div>
+
+        <div ref={mapRef} style={{ height: "40vh", width: "100%" }}>
+        {activeMarkerIndex !== null && (
+            <InfoWindow
+            lat={props.locations.shipmentChain[activeMarkerIndex].coordinates[0].$numberDecimal}
+            lng={props.locations.shipmentChain[activeMarkerIndex].coordinates[1].$numberDecimal}
+            onClose={closeInfoWindow}
+            title={props.locations.shipmentChain[activeMarkerIndex].name}
+          />
+        )}
+    </div>
     );
 };
 

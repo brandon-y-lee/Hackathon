@@ -2,26 +2,28 @@ import mongoose from "mongoose";
 
 //Data columns : ID, Seller, Material, Amount, Unit, Date, Status
 
-const ShipmentsSchema = new mongoose.Schema(
+const TransactionSchema = new mongoose.Schema(
   {
     id: String,
     // sellerName: String,
     // recipientName: String,
-    name: String,
     material: String,
     amount: Number,
-    unit: String,
+    unit: Number,
+    cost: String,
     // products: {
     //   type: [mongoose.Types.ObjectId],
     //   of: Number,
     // },
-    coordinates:[mongoose.Types.Decimal128],
+    coordinates:{
+      lat: mongoose.Types.Decimal128,
+      long: mongoose.Types.Decimal128,
+    },
     prev: [String],
-    next: String,
-    shipmentID: String
+    next: [String]
   },
   { timestamps: true }
 );
 
-const Shipments = mongoose.model("DummyShipments", ShipmentsSchema);
-export default Shipments;
+const Transaction = mongoose.model("Transaction", TransactionSchema);
+export default Transaction;

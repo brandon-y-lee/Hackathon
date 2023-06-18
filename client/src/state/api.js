@@ -14,12 +14,27 @@ export const api = createApi({
   /* tagTypes is an array of tag types that can be invalidated or refetched as part of the cache handling behavior. */
   tagTypes: [
     "User",
+    "Templates",
+    "Entity",
     "Shipments",
+    "Map",
+    "Sales",
+    "Admins",
+    "Performance",
+    "Dashboard",
   ],
   endpoints: (build) => ({
     getUser: build.query({
       query: (id) => `general/user/${id}`,
       providesTags: ["User"],
+    }),
+    getProducts: build.query({
+      query: () => "client/templates",
+      providesTags: ["Templates"],
+    }),
+    getCustomers: build.query({
+      query: () => "client/entity",
+      providesTags: ["Entity"],
     }),
     getTransactions: build.query({
       query: ({ page, pageSize, sort, search }) => ({
@@ -37,10 +52,38 @@ export const api = createApi({
       }),
       providesTags: ['chainOfShipments'],
     }),
+    getGeography: build.query({
+      query: () => "client/map",
+      providesTags: ["Map"],
+    }),
+    getSales: build.query({
+      query: () => "sales/sales",
+      providesTags: ["Sales"],
+    }),
+    getAdmins: build.query({
+      query: () => "management/admins",
+      providesTags: ["Admins"],
+    }),
+    getUserPerformance: build.query({
+      query: (id) => `management/performance/${id}`,
+      providesTags: ["Performance"],
+    }),
+    getDashboard: build.query({
+      query: () => "general/dashboard",
+      providesTags: ["Dashboard"],
+    }),
   }),
 });
 
 export const {
   useGetUserQuery,
+  useGetProductsQuery,
+  useGetCustomersQuery,
+  useGetTransactionsQuery,
   useGetChainOfShipmentsQuery,
+  useGetGeographyQuery,
+  useGetSalesQuery,
+  useGetAdminsQuery,
+  useGetUserPerformanceQuery,
+  useGetDashboardQuery,
 } = api;

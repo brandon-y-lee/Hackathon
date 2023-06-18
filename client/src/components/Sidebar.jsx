@@ -36,14 +36,62 @@ import logo from "assets/logo.png";
 
 
 const navItems = [
-  {
-    text: "Network",
-    icon: null,
-  },
+  // {
+  //   text: "Dashboard",
+  //   icon: <HomeOutlined />,
+  // },
+  // {
+  //   text: "Network",
+  //   icon: null,
+  // },
+  // {
+  //   text: "Map",
+  //   icon: <PublicOutlined />,
+  // },
   {
     text: "Shipments",
     icon: <Inventory2Outlined />,
   },
+  // {
+  //   text: "Entity",
+  //   icon: <PeopleAltOutlined />,
+  // },
+  // {
+  //   text: "Templates",
+  //   icon: <DescriptionOutlined />,
+  // },
+  // {
+  //   text: "Passports",
+  //   icon: null,
+  // },
+  // {
+  //   text: "Overview",
+  //   icon: <PointOfSaleOutlined />,
+  // },
+  // {
+  //   text: "Insights",
+  //   icon: <TodayOutlined />,
+  // },
+  // {
+  //   text: "Monthly",
+  //   icon: <CalendarMonthOutlined />,
+  // },
+  // {
+  //   text: "Breakdown",
+  //   icon: <PieChartOutlined />,
+  // },
+  // {
+  //   text: "Management",
+  //   icon: null,
+  // },
+  // {
+  //   text: "Admin",
+  //   icon: <AdminPanelSettingsOutlined />,
+  // },
+  // {
+  //   text: "Performance",
+  //   icon: <TrendingUpOutlined />,
+  // },
 ];
 
 const Sidebar = ({
@@ -84,9 +132,9 @@ const Sidebar = ({
           <Box width="100%">
             <Box m="2rem 2rem 2rem 3rem">
               <FlexBetween color={theme.palette.secondary.main}>
-                <Box display="flex" alignItems="center" gap="0.5rem">
+                {/* <Box display="flex" alignItems="center" gap="0.5rem">
                   <img src={logo} alt="Aleth Logo" height="45px" />
-                </Box>
+                </Box> */}
                 {!isNonMobile && (
                   <IconButton onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
                     <ChevronLeft />
