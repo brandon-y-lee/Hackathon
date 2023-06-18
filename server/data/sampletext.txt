@@ -1,0 +1,432 @@
+{
+      "id": "US2020349C9G8HT",
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.5448808,
+          45.2270374
+        ]
+      },
+      "properties": {
+        "name": "10K Lettering",
+        "address": "14995 Country Rd Rogers MN 55374",
+        "country_code": "US",
+        "os_id": "US2020349C9G8HT",
+        "country_name": "United States",
+        "has_approved_claim": false,
+        "ppe_product_types": null,
+        "ppe_contact_phone": null,
+        "ppe_contact_email": null,
+        "ppe_website": null,
+        "is_closed": null
+      }
+    },
+    {
+      "id": "US2020349635F81",
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.7767657,
+          37.629886
+        ]
+      },
+      "properties": {
+        "name": "10th Planet LLC-The",
+        "address": "204 George Martin Dr Danville KY 40422",
+        "country_code": "US",
+        "os_id": "US2020349635F81",
+        "country_name": "United States",
+        "has_approved_claim": false,
+        "ppe_product_types": null,
+        "ppe_contact_phone": null,
+        "ppe_contact_email": null,
+        "ppe_website": null,
+        "is_closed": null
+      }
+    },
+    {
+      "id": "US2022300WRE2C1",
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.417946,
+          28.428796
+        ]
+      },
+      "properties": {
+        "name": "11th Hour Business Solutions",
+        "address": "9424 Southridge Park Court, Suite 800, Orlando, FL, USA",
+        "country_code": "US",
+        "os_id": "US2022300WRE2C1",
+        "country_name": "United States",
+        "has_approved_claim": false,
+        "ppe_product_types": null,
+        "ppe_contact_phone": null,
+        "ppe_contact_email": null,
+        "ppe_website": null,
+        "is_closed": null
+      }
+    },
+    {
+      "id": "DE2023019MMW839",
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.4473648,
+          51.182841
+        ]
+      },
+      "properties": {
+        "name": "140Fahrenheit GmbH",
+        "address": "Monforts Quatier 41",
+        "country_code": "DE",
+        "os_id": "DE2023019MMW839",
+        "country_name": "Germany",
+        "has_approved_claim": true,
+        "ppe_product_types": null,
+        "ppe_contact_phone": null,
+        "ppe_contact_email": null,
+        "ppe_website": null,
+        "is_closed": null
+      }
+    },
+    {
+      "id": "DE20223002JTQC3",
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.1692099,
+          49.3523669
+        ]
+      },
+      "properties": {
+        "name": "2M Holdings Limited",
+        "address": "Surfachem Deutschland Gmbh, Surfachem Deutschland Gmbh Richtweg 81 90530 Wendelstein Bavaria Germany",
+        "country_code": "DE",
+        "os_id": "DE20223002JTQC3",
+        "country_name": "Germany",
+        "has_approved_claim": false,
+        "ppe_product_types": null,
+        "ppe_contact_phone": null,
+        "ppe_contact_email": null,
+        "ppe_website": null,
+        "is_closed": null
+      }
+    },
+    {
+      "id": "DE202118936ZXHP",
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.1713135,
+          47.6647294
+        ]
+      },
+      "properties": {
+        "name": "3FREUNDE",
+        "address": "Brauneggerstraße 34a, 78462 Konstanz",
+        "country_code": "DE",
+        "os_id": "DE202118936ZXHP",
+        "country_name": "Germany",
+        "has_approved_claim": false,
+        "ppe_product_types": null,
+        "ppe_contact_phone": null,
+        "ppe_contact_email": null,
+        "ppe_website": null,
+        "is_closed": null
+      }
+    },
+    {
+      "id": "FR2023034Z4W4Q0",
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.405313,
+          48.8971575
+        ]
+      },
+      "properties": {
+        "name": "205244-IBOUTEX-MIKO MODE",
+        "address": "100 avenue du General Lecelerc, 93500 PANTIN, FRANCE",
+        "country_code": "FR",
+        "os_id": "FR2023034Z4W4Q0",
+        "country_name": "France",
+        "has_approved_claim": false,
+        "ppe_product_types": null,
+        "ppe_contact_phone": null,
+        "ppe_contact_email": null,
+        "ppe_website": null,
+        "is_closed": null
+      }
+    },
+    {
+      "id": "FR20222287Q0ZBJ",
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.213749,
+          46.227638
+        ]
+      },
+      "properties": {
+        "name": "2XL France",
+        "address": "116 Rue des Adrets , ,",
+        "country_code": "FR",
+        "os_id": "FR20222287Q0ZBJ",
+        "country_name": "France",
+        "has_approved_claim": false,
+        "ppe_product_types": null,
+        "ppe_contact_phone": null,
+        "ppe_contact_email": null,
+        "ppe_website": null,
+        "is_closed": null
+      }
+    },
+    {
+      "id": "FR20223007P6T97",
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.7848761,
+          46.5227278
+        ]
+      },
+      "properties": {
+        "name": "37 Deux",
+        "address": "Parc Actilonne - 37 Allee Alain Gautier, Olonne-Sur-Mer, France",
+        "country_code": "FR",
+        "os_id": "FR20223007P6T97",
+        "country_name": "France",
+        "has_approved_claim": false,
+        "ppe_product_types": null,
+        "ppe_contact_phone": null,
+        "ppe_contact_email": null,
+        "ppe_website": null,
+        "is_closed": null
+      }
+    },
+    {
+      "id": "EG20211894J5X61",
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.3909597,
+          30.2327128
+        ]
+      },
+      "properties": {
+        "name": "ACE Apparel Egypt",
+        "address": "18- Wahid El Mashtoly St. - El Khanka - El Qalyubia- Egypt",
+        "country_code": "EG",
+        "os_id": "EG20211894J5X61",
+        "country_name": "Egypt",
+        "has_approved_claim": false,
+        "ppe_product_types": null,
+        "ppe_contact_phone": null,
+        "ppe_contact_email": null,
+        "ppe_website": null,
+        "is_closed": null
+      }
+    },
+    {
+      "id": "EG201909658XSER",
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.2622119,
+          30.0793901
+        ]
+      },
+      "properties": {
+        "name": "AGE (Al Shimaa For Garment And Embroidery)",
+        "address": "Street No.# 5  Nasr City Public Free Zone Cairo Al Qahirah",
+        "country_code": "EG",
+        "os_id": "EG201909658XSER",
+        "country_name": "Egypt",
+        "has_approved_claim": false,
+        "ppe_product_types": null,
+        "ppe_contact_phone": null,
+        "ppe_contact_email": null,
+        "ppe_website": null,
+        "is_closed": null
+      }
+    },
+    {
+      "id": "EG2020079QKASK0",
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.0358045,
+          30.4396164
+        ]
+      },
+      "properties": {
+        "name": "Ahmed Ahmed Abbas Aggour for Readymade Garments",
+        "address": "El Andalus Street, El Bagour, Egypt",
+        "country_code": "EG",
+        "os_id": "EG2020079QKASK0",
+        "country_name": "Egypt",
+        "has_approved_claim": false,
+        "ppe_product_types": null,
+        "ppe_contact_phone": null,
+        "ppe_contact_email": null,
+        "ppe_website": null,
+        "is_closed": null
+      }
+    },
+    {
+      "id": "RU20223000D0AHR",
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          37.5807921,
+          55.7477968
+        ]
+      },
+      "properties": {
+        "name": "AMD International Sales & Services, Ltd.",
+        "address": "Office 707, Smolenskaya square 3, Moscow, 121099 ",
+        "country_code": "RU",
+        "os_id": "RU20223000D0AHR",
+        "country_name": "Russian Federation",
+        "has_approved_claim": false,
+        "ppe_product_types": null,
+        "ppe_contact_phone": null,
+        "ppe_contact_email": null,
+        "ppe_website": null,
+        "is_closed": null
+      }
+    },
+    {
+      "id": "RU2022300ADC32R",
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          38.1298384,
+          53.1042919
+        ]
+      },
+      "properties": {
+        "name": "Cargill Incorporated",
+        "address": "Llc Cargill, 10, Molodyozhnaya Street 301847 Efremov, Tula Region Russian Federation",
+        "country_code": "RU",
+        "os_id": "RU2022300ADC32R",
+        "country_name": "Russian Federation",
+        "has_approved_claim": false,
+        "ppe_product_types": null,
+        "ppe_contact_phone": null,
+        "ppe_contact_email": null,
+        "ppe_website": null,
+        "is_closed": null
+      }
+    },
+    {
+      "id": "RU2022300ZMRH0C",
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.2713058,
+          60.04490329999999
+        ]
+      },
+      "properties": {
+        "name": "Certain bvba",
+        "address": "Perfetti Van Melle Co., Ltd- 18, Repishcheva Str., 209, Leshkovo- St. Petersburg Istra District Moscow -197375 143581",
+        "country_code": "RU",
+        "os_id": "RU2022300ZMRH0C",
+        "country_name": "Russian Federation",
+        "has_approved_claim": false,
+        "ppe_product_types": null,
+        "ppe_contact_phone": null,
+        "ppe_contact_email": null,
+        "ppe_website": null,
+        "is_closed": null
+      }
+    },
+    {
+      "id": "MX2019100Y2CPN9",
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -103.4737412,
+          25.5574353
+        ]
+      },
+      "properties": {
+        "name": "Aalfs Mfg Mexico OMJC",
+        "address": "Blvd. Gzlez de la Vega 233, Parque Industrial Lagunero, Gomez Palacio, Durango",
+        "country_code": "MX",
+        "os_id": "MX2019100Y2CPN9",
+        "country_name": "Mexico",
+        "has_approved_claim": false,
+        "ppe_product_types": null,
+        "ppe_contact_phone": null,
+        "ppe_contact_email": null,
+        "ppe_website": null,
+        "is_closed": null
+      }
+    },
+    {
+      "id": "MX2019100SP5PA6",
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -103.442293,
+          26.1056235
+        ]
+      },
+      "properties": {
+        "name": "Aalfs OMJC Tlahualilo Sew",
+        "address": "Chihuahua e Ipecauamas S/N, Tlahualilo, Durango",
+        "country_code": "MX",
+        "os_id": "MX2019100SP5PA6",
+        "country_name": "Mexico",
+        "has_approved_claim": false,
+        "ppe_product_types": null,
+        "ppe_contact_phone": null,
+        "ppe_contact_email": null,
+        "ppe_website": null,
+        "is_closed": null
+      }
+    },
+    {
+      "id": "MX2021125QNKGST",
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -101.6733425,
+          21.1089089
+        ]
+      },
+      "properties": {
+        "name": "ABUCOMBAL",
+        "address": "Guty Cárdenas, San Nicolas, León, Gto., Mexico",
+        "country_code": "MX",
+        "os_id": "MX2021125QNKGST",
+        "country_name": "Mexico",
+        "has_approved_claim": false,
+        "ppe_product_types": null,
+        "ppe_contact_phone": null,
+        "ppe_contact_email": null,
+        "ppe_website": null,
+        "is_closed": null
+      }
+    },
