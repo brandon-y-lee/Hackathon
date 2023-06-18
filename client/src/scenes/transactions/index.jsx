@@ -108,8 +108,12 @@ const Transactions = () => {
       </FlexBetween>
       
       <Box mt="2rem">
-        <Map coordinates={coordinates} locations={locations}>
+        <Map 
+          coordinates={coordinates}
+          locations={locations}>
         </Map>
+
+
       </Box>
       
       <Box

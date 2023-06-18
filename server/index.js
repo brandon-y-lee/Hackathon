@@ -7,6 +7,10 @@ import helmet from 'helmet';
 import morgan from 'morgan';
 import clientRoutes from "./routes/client.js";
 
+/* DATA IMPORTS */
+import { dataShipments } from './data/index.js';
+import Shipments from "./models/Shipments.js";
+
 /* CONFIG */
 dotenv.config();
 const app = express();
@@ -24,13 +28,16 @@ app.use("/client", clientRoutes);
 /* MONGOOSE SETUP */
 const PORT = process.env.PORT || 9000;
 mongoose
-    .connect(process.env.MONGO_URL, {
-        useNewUrlParser: true,
-        useUnifiedTopology: true,
-    })
-    .then(() => {
-        app.listen(PORT, () => console.log(`Server Port: ${PORT}`));
-        // Shipments.insertMany(dataShipments);
-    })
-    .catch((error) => console.log(`${error} Did not connect`));
+  .connect(process.env.MONGO_URL, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => {
+    console.log("hit");
+    app.listen(PORT, () => console.log(`Server Port: ${PORT}`));
+    console.log("here");
+    /* ONLY ADD DATA ONE TIME */
+    Shipments.insertMany(dataShipments);
+  })
+  .catch((error) => console.log(`${error} Did not connect`));
  

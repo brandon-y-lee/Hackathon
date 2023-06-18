@@ -3,8 +3,6 @@ import Shipments from "../models/Shipments.js";
 
 export const getTransactions = async (req, res) => {
     try {
-      console.log("hit it");
-      // print("here");
       // sort should look like this: { "field": "userId", "sort": "desc"}
       const { page = 1, pageSize = 20, sort = null, search = "" } = req.query;
   

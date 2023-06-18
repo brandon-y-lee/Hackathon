@@ -42,6 +42,5 @@ export const api = createApi({
 
 export const {
   useGetUserQuery,
-  useGetTransactionsQuery,
   useGetChainOfShipmentsQuery,
 } = api;
